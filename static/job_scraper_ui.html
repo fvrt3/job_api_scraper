@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Job Listings</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Remote Job Listings</h1>
+
+    <div class="search-bar">
+        <input type="text" id="keyword" placeholder="Keyword (e.g. Python)">
+        <input type="text" id="location" placeholder="Location (e.g. Remote)">
+        <div class="salary-range">
+            <input type="number" id="minSalary" placeholder="Min Salary">
+            <input type="number" id="maxSalary" placeholder="Max Salary">
+        </div>
+        <button onclick="loadJobs(1)">Search</button>
+    </div>
+
+    <div id="jobs" class="job-grid"></div>
+
+    <div class="pagination">
+        <button onclick="prevPage()">Previous</button>
+        <span id="pageInfo">Page 1</span>
+        <button onclick="nextPage()">Next</button>
+    </div>
+
+    <script src="/static/scripts.js"></script>
+</body>
+</html>
